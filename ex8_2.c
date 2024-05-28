@@ -55,3 +55,28 @@ int main(void) {
     insertEdge(G4, 1, 0);
     insertEdge(G4, 1, 2);
 }
+
+// G4 구성 : 정점 u에 대한 간선 (u,v)의 삽입순서는 v가 큰 것부터.
+createGraph(G4);
+for (i = 0; i < 3; i++)
+    insertVertex(G4, i);  // G4의 정점 0-2 삽입
+insertEdge(G4, 0, 2);
+insertEdge(G4, 0, 1);
+insertEdge(G4, 1, 0);
+insertEdge(G4, 1, 2);
+
+// --- 완성된 인접 리스트 출력
+printf("\n G1의 인접 리스트");
+print_adjList(G1);
+
+printf("\n\n G2의 인접 리스트");
+print_adjList(G2);
+
+printf("\n\n G3의 인접 리스트");
+print_adjList(G3);
+
+printf("\n\n G4의 인접 리스트");
+print_adjList(G4);
+
+getchar(); return 0;
+
